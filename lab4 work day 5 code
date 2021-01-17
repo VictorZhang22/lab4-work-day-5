@@ -1,0 +1,44 @@
+def sumSquareDifference():
+    x = 0 # here I have one variable which has the value of 0, and this will be the square of the sum of the numbers
+    y = 0 # here I have one variable which has the value of 0, and this will be the sum of square of the numbers
+
+    for i in range(1, 101): # this for loop to go through all of the numbers between 1 and 100
+        x = x + i # this line adds a value to the previous variable x, which is 0 at the start
+    x = x**2 # this is the final result of the square of the sum of the numbers, hence the **2
+
+    for h in range(1, 101): # this for loop does the same thing as the first one
+        y = y+h**2 
+        # this line adds the value of the squared number to the value 0 (which is the rum of all of the numbers squared)
+
+# the next part is not necessary but it helps. I can just say y-x and then enter the value, but what if the y value is smaller than x value? Then the result will be negative. I know that in this problem it is impossible to get a negative value, but I thought that it would be convenient if I added it. 
+    if y > x: # I do not want to end up with a negative number, so I use this line to check if y is bigger than x
+        result = y - x # if it is, then y minus x
+    else: 
+        result = x - y # if x is bigger than y, then x minus y
+ # the previous part of the script just makes sure that the result is always positive       
+    print(result)
+
+
+
+
+def isItPrime(n): # this function checks to see if the input is a prime number, if it is, then the function will return it, and vice versa
+    for i in range(2, n):
+        if n % i == 0:
+            break
+    else:
+        print("true")
+
+
+
+
+def primeNum10001():
+    primeNumbers = []
+    while len(primeNumbers) < 50:
+        start = 2
+        if isItPrime(start):
+            primeNumbers.append(start)
+            start + 1
+            print(start)
+        else:
+            start += 1
+    # print(primeNumbers)
